@@ -139,22 +139,22 @@ export default function Home({ data }) {
   return (
     <>
       <Head>
-        <title>関西グルメ店検索</title>
+        <title>関西うまいもん検索</title>
       </Head>
-      <div className="max-w-3xl font-mono bg-gray-100 mx-auto">
+      <div className="max-w-3xl font-mono mx-auto">
         <div>
           <div className="text-2xl py-6 text-center">
-            <h2 className="font-medium tracking-wider ">関西グルメ店検索</h2>
+            <h2 className="font-medium tracking-wider ">関西うまいもん検索</h2>
           </div>
-          <div className="">
+          <div>
             <form onSubmit={handlerOnSubmitSearch} className="text-center">
               <input
                 type="search"
                 name="query"
-                className="rounded py-2 px-4 text-left border-red-500"
+                className="border-2 rounded py-2 px-4 text-left border-yellow-300 "
                 placeholder="キーワードを入力して下さい"
               />
-              <button className="ml-2 text-white bg-red-500 rounded py-2 px-6 hover:opacity-75">
+              <button className="ml-2 text-white bg-yellow-300 rounded py-2 px-6 hover:opacity-75">
                 Search
               </button>
             </form>
@@ -168,7 +168,7 @@ export default function Home({ data }) {
             return (
               <li
                 key={index}
-                className="my-4 bg-white rounded border-red-500 border-2"
+                className="my-4 bg-white rounded border-yellow-300 border-2"
               >
                 <Link href={item.urls.pc}>
                   <a>
@@ -202,7 +202,7 @@ export default function Home({ data }) {
         ) : (
           <div className="text-center pt-4 pb-8">
             <button
-              className="bg-red-500 rounded text-white tracking-wider font-medium hover:opacity-75 py-2 px-6 "
+              className="bg-yellow-300 rounded text-white tracking-wider font-medium hover:opacity-75 py-2 px-6 "
               onClick={handlerOnClickReaderMore}
             >
               もっと読む
